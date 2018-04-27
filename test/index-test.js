@@ -17,7 +17,7 @@ describe('logShout(string)', function() {
 
     logShout('hello')
 
-    expect(spy).toHaveBeenCalledWith('HELLO')
+    expect(console.log).toHaveBeenCalledWith('HELLO')
 
     console.log.restore()
   })
@@ -29,7 +29,7 @@ describe('logWhisper(string)', function() {
 
     logWhisper('HELLO')
 
-    expect(spy).toHaveBeenCalledWith('hello')
+    expect(console.log).toHaveBeenCalledWith('hello')
 
     console.log.restore()
   })
@@ -37,7 +37,7 @@ describe('logWhisper(string)', function() {
 
 describe('sayHiToGrandma(string)', function() {
   it('returns "I can\'t hear you!" if `string` is lowercase', function() {
-    expect(sayHiToGrandma('hello')).toEqual("I can't hear you!")
+    expect(sayHiToGrandma('hello')).toEqual("i can\'t hear you!")
   })
 
   it('returns "YES INDEED!" if `string` is uppercase', function() {
